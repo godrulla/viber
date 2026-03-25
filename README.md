@@ -1,48 +1,94 @@
-# viber
+# Viber
 
-A project powered by the **Elite Global Agent System** - world-class AI agents with cutting-edge expertise.
+Real-time communication platform with messaging, WebSocket channels, and AI-powered intelligence.
 
-## 🚀 Quick Start
+## Features
 
-This project includes elite AI agents in the `.agents/` directory. Each agent brings world-class expertise with memorable personality.
+- Real-time messaging via Socket.IO
+- User authentication with JWT
+- Rate limiting and security hardening (Helmet, CORS)
+- Redis-backed session and caching layer
+- MongoDB data persistence
+- Input validation with Joi and express-validator
+- Structured logging with Winston
+- React client with modern UI
 
-### Using Your Elite Agents
+## Tech Stack
 
-1. **Copy agents to project root**:
-   ```bash
-   cp .agents/ARQ.md ./    # For system architecture
-   cp .agents/ZEN.md ./    # For clean code
-   ```
+- **Backend:** Node.js, Express, Socket.IO
+- **Database:** MongoDB (Mongoose), Redis
+- **Auth:** JWT, bcrypt
+- **Client:** React (Create React App)
+- **Testing:** Jest, Supertest
 
-2. **Reference in Claude Code**: See `CLAUDE.md` for agent details
+## Getting Started
 
-3. **Combine agents** for complex challenges
+### Prerequisites
 
-## 🌟 Available Agents
+- Node.js 18+
+- MongoDB
+- Redis
 
-- **ARQ** - Visionary system architect
-- **ZEN** - Code zen master  
-- **VEX** - Creative design visionary
-- **SAGE** - Strategic oracle
-- **NOVA** - Innovation catalyst
-- **ORC** - Master orchestrator
-- **ECHO** - Voice of the people
-
-## 🔧 Development
+### Install
 
 ```bash
-# Install dependencies (if applicable)
+# Backend
 npm install
 
-# Start development
-npm run dev
+# Client
+cd client && npm install
 ```
 
-## 📚 Documentation
+### Environment Variables
 
-- **CLAUDE.md** - Complete agent documentation and usage guide
-- **.agents/** - Individual agent files with cutting-edge expertise
+Copy `.env.example` to `.env` and configure:
 
----
+| Variable | Description |
+|----------|-------------|
+| `PORT` | Server port |
+| `MONGODB_URI` | MongoDB connection string |
+| `REDIS_URL` | Redis connection string |
+| `JWT_SECRET` | JWT signing secret |
+| `AWS_ACCESS_KEY_ID` | AWS access key (optional) |
+| `AWS_SECRET_ACCESS_KEY` | AWS secret key (optional) |
 
-*Built with elite AI agents for world-class results! 🌟*
+### Run
+
+```bash
+# Development
+npm run dev
+
+# Client
+cd client && npm start
+```
+
+## Project Structure
+
+```
+viber/
+├── index.js              # Entry point
+├── src/
+│   ├── app.js            # Express app setup
+│   ├── config/           # Configuration
+│   ├── controllers/      # Route controllers
+│   ├── middleware/        # Auth, rate limiting, validation
+│   ├── models/           # Mongoose models
+│   ├── routes/           # API routes
+│   ├── services/         # Business logic
+│   └── utils/            # Helpers
+├── client/               # React frontend
+├── tests/                # Test suites
+└── docs/                 # Documentation
+```
+
+## Contributing
+
+PRs welcome.
+
+## License
+
+MIT
+
+## Credits
+
+Built by Armando Diaz Silverio

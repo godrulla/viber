@@ -1,0 +1,45 @@
+# Elite Project Configuration
+project:
+  name: viber
+  created: 2025-08-07T16:26:13.079299
+  type: elite_global_agents
+  version: "2.0"
+
+agents:
+  installed: 7
+  available:
+    ARQ:
+      nickname: *arq
+      full_name: The Visionary Architect
+      file: .agents/ARQ.md
+    ORC:
+      nickname: *orc
+      full_name: The Master Orchestrator
+      file: .agents/ORC.md
+    ZEN:
+      nickname: *zen
+      full_name: The Code Zen Master
+      file: .agents/ZEN.md
+    VEX:
+      nickname: *vex
+      full_name: The Creative Visionary
+      file: .agents/VEX.md
+    SAGE:
+      nickname: *sage
+      full_name: The Strategic Oracle
+      file: .agents/SAGE.md
+    NOVA:
+      nickname: *nova
+      full_name: The Innovation Catalyst
+      file: .agents/NOVA.md
+    ECHO:
+      nickname: *echo
+      full_name: The Voice of the People
+      file: .agents/ECHO.md
+
+usage:
+  method_1: "Copy agent files to project root for immediate use"
+  method_2: "Reference .agents/*.md files in Claude conversations" 
+  method_3: "Combine multiple agents for complex challenges"
+
+philosophy: "World-class expertise with memorable personalities and deeper purpose"
